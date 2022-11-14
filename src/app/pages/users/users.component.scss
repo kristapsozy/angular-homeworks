@@ -1,0 +1,17 @@
+.user-section {
+  display: flex;
+  justify-content: center;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  width: 500px;
+}
+
+.user-card {
+  width: 100%;
+}

@@ -1,0 +1,199 @@
+<section class="register-section">
+  <div class="register-form-container">
+    <form *ngIf="registerForm" [formGroup]="registerForm" class="register-form">
+      <div class="register-form-header">
+        <span class="header-main-text">Register</span>
+      </div>
+      <div class="register-form-content">
+        <div class="form-field">
+          <label class="label" for="name">Name</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registerForm.get('name')?.invalid &&
+                registerForm.get('name')?.touched
+            }"
+            formControlName="name"
+            class="input"
+            id="name"
+            placeholder="Enter your name"
+            type="text"/>
+          <small
+            *ngIf="
+              registerForm.get('name')?.hasError('required') &&
+              registerForm.get('name')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+        </div>
+        <div class="form-field">
+          <label class="label" for="surname">Surname</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registerForm.get('surname')?.invalid &&
+                registerForm.get('surname')?.touched
+            }"
+            formControlName="surname"
+            class="input"
+            id="surname"
+            placeholder="Enter your surname"
+            type="text"/>
+          <small
+            *ngIf="
+              registerForm.get('surname')?.hasError('required') &&
+              registerForm.get('surname')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+        </div>
+        <div class="form-field">
+          <label class="label" for="email">Email</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registerForm.get('email')?.invalid &&
+                registerForm.get('email')?.touched
+            }"
+            formControlName="email"
+            class="input"
+            id="email"
+            placeholder="Enter your email"
+            type="text"/>
+          <small
+            *ngIf="
+              registerForm.get('email')?.hasError('required') &&
+              registerForm.get('email')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+          <small
+            *ngIf="
+              registerForm.get('email')?.hasError('email') &&
+              registerForm.get('email')?.touched
+            "
+            class="error">
+            Email is not correct
+          </small>
+        </div>
+        <div class="form-field">
+          <label class="label" for="username">Username</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registerForm.get('username')?.invalid &&
+                registerForm.get('username')?.touched
+            }"
+            formControlName="username"
+            class="input"
+            id="username"
+            placeholder="Enter your username"
+            type="text"/>
+          <small
+            *ngIf="
+              registerForm.get('username')?.hasError('required') &&
+              registerForm.get('username')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+          <small
+            *ngIf="
+              registerForm.get('username')?.hasError('minlength') &&
+              registerForm.get('username')?.touched
+            "
+            class="error">
+            Value should be at least 3 characters
+          </small>
+        </div>
+        <div class="form-field">
+          <label class="label" for="password">Password</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registerForm.get('password')?.invalid &&
+                registerForm.get('password')?.touched
+            }"
+            formControlName="password"
+            class="input"
+            id="password"
+            placeholder="Enter your password"
+            type="password"/>
+          <small
+            *ngIf="
+              registerForm.get('password')?.hasError('required') &&
+              registerForm.get('password')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+          <small
+            *ngIf="
+              registerForm.get('password')?.hasError('minlength') &&
+              registerForm.get('password')?.touched
+            "
+            class="error">
+            Value should be at least 3 characters
+          </small>
+        </div>
+        <div class="form-field">
+          <label class="label" for="birtDate">Birth date</label>
+          <input
+            [ngClass]="{
+              'field-error':
+                registerForm.get('birtDate')?.invalid &&
+                registerForm.get('birtDate')?.touched
+            }"
+            formControlName="birtDate"
+            class="input"
+            id="birtDate"
+            placeholder="Enter your birth date"
+            type="date"/>
+          <small
+            *ngIf="
+              registerForm.get('birtDate')?.hasError('required') &&
+              registerForm.get('birtDate')?.touched
+            "
+            class="error">
+            This field is required
+          </small>
+        </div>
+        <div class="checkbox-content">
+          <div class="checkbox-form-field">
+            <input formControlName="subscribe" id="subscribe" type="checkbox"/>
+            <label for="subscribe">Subscribe to News</label>
+          </div>
+          <div class="checkbox-form-field">
+            <input
+              [ngClass]="{
+              'field-error':
+                registerForm.get('birtDate')?.invalid &&
+                registerForm.get('birtDate')?.touched
+            }" formControlName="agree" id="agree" type="checkbox"/>
+            <small
+              *ngIf="
+              registerForm.get('agree')?.hasError('required') &&
+              registerForm.get('agree')?.touched
+            "
+              class="agree-error">
+              You need to agree to Terms and Conditions
+            </small>
+            <label for="agree">Agree to Terms and Conditions</label>
+          </div>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button
+          [disabled]="registerForm.invalid"
+          (click)="login()"
+          class="submit-btn"
+          type="button">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

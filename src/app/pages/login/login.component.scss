@@ -1,0 +1,177 @@
+.login-section {
+  padding: 20px;
+  background-color: #F0F4EF;
+  min-height: 100vh;
+}
+
+.login-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  width: 450px;
+  background-color: white;
+}
+
+.login-form-header {
+  background-color: rgba(85, 110, 230, 0.25);
+  border-radius: 4px 4px 0 0;
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  color: #556EE6;
+  gap: 8px;
+  background-image: url("/assets/images/login-header.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.header-main-text {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.header-sub-text {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.login-form-content {
+  padding: 80px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 13px;
+  color: #495057;
+}
+
+.submit-btn {
+  background-color: #556EE6;
+  border-radius: 4px;
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0.9;
+
+  &:disabled {
+    background-color: #94a2ad;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    box-shadow: 1px 1px 1px 1px #666;
+  }
+}
+
+.profile-image-container {
+  position: absolute;
+  top: -20px;
+  left: 24px;
+}
+
+.profile-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid #F8F8FB;
+}
+
+.error {
+  position: absolute;
+  bottom: -13px;
+  color: crimson;
+  font-size: 8px;
+}
+
+.input {
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+  padding: 8px 12px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.field-error {
+    border-color: crimson;
+  }
+}
+
+.forgot {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+  gap: 8px;
+}
+
+.image {
+
+  margin: 4px;
+  width: 11px;
+  height: 13px;
+}
+
+.forgot-pasword-link {
+  text-decoration: none;
+  font-family: 'Poppins', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: #74788D;
+
+  &:hover {
+    color: #5866af;
+  }
+}
+
+.dont-have-account {
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: #495057;
+  padding: 36px;
+}
+
+.signup {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #556EE6;;
+
+  &:hover {
+    color: #1b2fc7;
+  }
+
+
+}
+

@@ -1,0 +1,17 @@
+<div class="card" *ngIf="user">
+  <div class="card-image-container">
+    <div
+      class="card-image"
+      [ngStyle]="{
+        'background-image':
+          'url(' + 'https://picsum.photos/id/' + user.id + '/300/300' + ')'
+      }"></div>
+  </div>
+  <div class="card-details-container">
+    <div>
+      <h1 class="name">{{ user.name }}</h1>
+      <p class="description">{{ user.website }}</p>
+    </div>
+    <a class="link" [routerLink]="['./', user.id]">Read more</a>
+  </div>
+</div>

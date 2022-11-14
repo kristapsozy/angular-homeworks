@@ -1,0 +1,203 @@
+
+.planner-section {
+  background-color: #080c57;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.planner {
+  background-color: #23B5D3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  width: 400px;
+}
+
+.planner-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.task-add-btn {
+  border: none;
+  background-color: #1b2fc7;
+  color: white;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 0 2px #999;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+  }
+}
+
+.planner-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.task-input {
+  width: 100%;
+}
+
+.planner-container {
+  display: flex;
+  justify-content: center;
+}
+
+.planner-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.planner-task {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: #DFE0E2;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: rgba(18, 40, 159, 0.24) 0 3px 8px;
+  font-size: 20px;
+  word-break: break-all;
+
+}
+
+.planner-task-counter {
+  text-align: center;
+  margin-top: 12px;
+  text-transform: uppercase;
+
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 2.5px;
+}
+.task-del-button {
+  border: none;
+  background-color: #d2153b;
+  color: white;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  box-shadow: 0 2px #999;
+  font-size: 15px;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+  }
+}
+:root {
+  --form-control-color: rebeccapurple;
+  --form-control-disabled: #959495;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+form {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+.form-control--disabled {
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  padding: 5px;
+  max-width: 22px;
+  height: 22px;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  /* Windows High Contrast Mode */
+  background-color: #0800ff;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:hover {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+input[type="checkbox"]:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+
+
+
+

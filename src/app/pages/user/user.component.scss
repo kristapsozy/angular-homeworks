@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+.user-section {
+  background-color: white;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+
+}
+
+.user-container {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  display: flex;
+  background-color: #f5f5f5;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.user-info-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  gap: 16px;
+}
+
+.detail-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 250px;
+}
+
+.user-details {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.image {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.row {
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 33px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #A3A3A3;
+  vertical-align: middle;
+
+}
+
+.column {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 16px;
+  line-height: 33px;
+  color: #3A3D5B;
+  vertical-align: middle;
+}
+
+.table {
+  border-spacing: 5px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  max-width: 500px;
+  max-height: 160px;
+  padding: 10px;
+}
+
+.info {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 49px;
+  color: #1D2254;
+}
+
+.address-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  max-height: 260px;
+  padding: 10px;
+}
+
+.info-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.catch-phrase {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  max-height: 350px;
+  padding: 24px;
+  gap: 5px
+}
+
+.image-quote {
+  height: 18px;
+  width: 22px;
+}
+
+.quote-text {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 16px;
+  line-height: 18px;
+  color: #3A3D5B;
+}
+
+

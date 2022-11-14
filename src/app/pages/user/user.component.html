@@ -1,0 +1,71 @@
+<section class="user-section">
+  <div class="user-container">
+    <div class="user-info-blocks" *ngIf="user$ | async as user">
+      <div class="detail-fields">
+        <div class="user-details" *ngIf="user$ | async as user">
+          <h2> {{ user.name }} </h2>
+          <div
+            class="image"
+            [ngStyle]="{
+          'background-image':
+            'url(' + 'https://picsum.photos/id/' + user.id + '/300/300' + ')'
+       }"></div>
+          <table class="table">
+            <tr>
+              <th class="row">Username:</th>
+              <td class="column">{{user.username}}</td>
+            </tr>
+            <tr>
+              <th class="row">Website:</th>
+              <td class="column">{{user.website}}</td>
+            </tr>
+            <tr>
+              <th class="row">ID:</th>
+              <td class="column">{{user.id}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="catch-phrase">
+          <img src="/assets/images/qoute.svg" class="image-quote">
+          <p class="quote-text"> {{user.company.catchPhrase}} </p>
+        </div>
+      </div>
+      <div class="info-fields">
+        <div class="contact-info" *ngIf="user$ | async as user">
+          <p class="info">Contact info</p>
+          <table class="table">
+            <tr>
+              <th class="row">Phone:</th>
+              <td class="column">{{user.phone}}</td>
+            </tr>
+            <tr>
+              <th class="row">Email:</th>
+              <td class="column">{{user.email}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="address-info" *ngIf="user$ | async as user">
+          <p class="info">Address</p>
+          <table class="table">
+            <tr>
+              <th class="row">Street:</th>
+              <td class="column">{{user.address.street}}</td>
+            </tr>
+            <tr>
+              <th class="row">Suite:</th>
+              <td class="column">{{user.address.suite}}</td>
+            </tr>
+            <tr>
+              <th class="row">City:</th>
+              <td class="column">{{user.address.city}}</td>
+            </tr>
+            <tr>
+              <th class="row">Zipcode:</th>
+              <td class="column">{{user.address.zipcode}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<section class="planner-section">
+  <h1 class="planner-title">Planner page</h1>
+  <div class="planner-container">
+    <div class="planner">
+      <div class="planner-actions">
+        <input [(ngModel)]="inputValue" class="task-input" type="text" placeholder="Add new task..." />
+        <button (click)="addTask()" class="task-add-btn">Add</button>
+      </div>
+      <div class="planner-tasks">
+
+       <div class="planner-task" *ngFor="let task of plannerTasks; let i = index">
+         <input [(ngModel)]="task.done" class="task-control" type="checkbox"/>
+         <p [ngClass]="{'strikethrough' : task.done }"> {{task.text}} </p>
+         <button (click)="deleteTask(i)" class="task-del-button"><fa-icon [icon]="faTrash"></fa-icon></button>
+       </div>
+      </div>
+      <div class="planner-task-counter">
+        <strong>{{showCompletedTasks()}}</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+

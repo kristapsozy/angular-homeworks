@@ -1,0 +1,9 @@
+<header class="header">
+  <a
+    *ngFor="let item of headerItems"
+    class="header-link"
+    [routerLink]="item.path"
+    routerLinkActive="active">
+    {{ item.title }}
+  </a>
+</header>
